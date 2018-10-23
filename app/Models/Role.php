@@ -12,13 +12,16 @@ class Role extends TitanCMSModel
     // basic website
     public static $WEBSITE = 'website'; // 1
 
+    // basic admin
+    public static $ADMIN = 'admin'; // 1
+
     // base user
     public static $USER = 'user'; // 2
 
     // basic admin
     public static $BASE_ADMIN = 'base_admin'; // 3
 
-    public static $ADMIN_SUPER = 'admin'; // 4
+    public static $ADMIN_SUPER = 'admin_super'; // 4
 
     public static $DEVELOPER = 'developer'; // 5
 
