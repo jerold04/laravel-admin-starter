@@ -1,26 +1,19 @@
 # Laravel CMS Starter Project
 
-Thought I share with you all that I am busy refactoring 'titan' (all the core files of the admin starter, this includes the pages, navigation and then all functionality: blog, banners, page builder, etc)
-
-The idea is to have all the files in the vendor directoy and not the application to keep your application folder clean. You will be able to publish all or only selected features to your application for customization.
-Progress: ~50% (will upgrade this project as soon as I have it working)
-[Link to the repository](https://github.com/bpocallaghan/titan)
+Version 2 is under development (alpha version). Please have a look here for [version 1](https://github.com/bpocallaghan/laravel-admin-starter/tree/version_1).
+Version 2 is a refactored version of `version 1 (admin starter project)`, meaning that all the files were inside your applications' directory. However now it is all inside a package.
+[Link to the repository](https://github.com/bpocallaghan/titan).
 
 A Laravel CMS Starter project with AdminLTE theme and core features.
-- Laravel 5.6 (master)
-- Laravel 5.5 (Branch Laravel 5.5)
-- Laravel 5.4 (Branch Laravel 5.4)
-- Laravel 5.2 (Branch Laravel 5.2)
+- [version 1](https://github.com/bpocallaghan/laravel-admin-starter/tree/version_1)
+- version 2 (master branch)
 
 [Preview project here](http://bpocallaghan.co.za)
 - User: github@bpocallaghan.co.za
 - Password: github
 
 ### What is New?
-- Upgraded to Laravel 5.6'
-- App\User model was changed to App\Models\User model
-- Add config/app.php - "is_preview". This is to prevent users to delete pages and users from the demo site.
-- Add admin/accounts. The clients index.blade.php is a good example when working with 1+K entries. It use Laravel Paginator via Ajax pages and filter.
+- Refactored all files to [titan](https://github.com/bpocallaghan/titan)
 
 ## Features / What it includes
 - Admin LTE admin theme
@@ -30,24 +23,20 @@ A Laravel CMS Starter project with AdminLTE theme and core features.
 - Log Website Activities (if contact us was submitted, etc)
 - Notifications (Laravel notifications)
 - Log Admin Activities (when admin create,edit,delete a resource)
-- Bootstrap Alerts and Form Error messages. package; bpocallaghan/alert
-- Flash a Notification after a CRUD resource action. package; bpocallaghan/notify
-- Generate crud resource, individual files. package; bpocallaghan/generators
-- Impersonate any of your customers
+- Bootstrap Alerts and Form Error messages. [bpocallaghan/alert](https://github.com/bpocallaghan/alert)
+- Flash a Notification after a CRUD resource action. [bpocallaghan/notify](https://github.com/bpocallaghan/alert)
+- Generate crud resource, individual files. [bpocallaghan/generators](https://github.com/bpocallaghan/alert)
+- Impersonate any of your customers. [bpocallaghan/impersonate](https://github.com/bpocallaghan/impersonate)
 - Roles, Assign roles to the user and navigation to exlude navigation for a user.
-- Manage Blog, Banners, FAQ, Photos and many more.
+- Manage Blog, Banners, FAQ, Photos.
+- Reports with Chartjs
 
 ## Setup (Basic)
 - ```composer create-project bpocallaghan/laravel-admin-starter:dev-master laravel-admin-starter```
 - open .env and set the app info (url, title, description, etc)
-- check the installation with file search by Notepad++ (App\Models\User the new place instead of the the App\User model)
-- check ..TableSeeder.php files because the DB::delete('TRUNCATE.. lines will generate DB errors, comment out them
 - create your database and set db name in .env
 - ```php artisan migrate```
-- ```php artisan db:seed```
-	- open database\seeds\UserTableSeeder.php to enter your admin user
-- open your browser (http://laravel-admin.local)
-- log into the admin (http://laravel-admin.local/admin) with your admin user
+- ```php artisan titan:db:seed```
 
 ## Setup (Advanced)
 - complete 'basic' setup
@@ -72,24 +61,21 @@ A Laravel CMS Starter project with AdminLTE theme and core features.
 - get a Google Maps js API key (after you've created the project in google) https://developers.google.com/maps/documentation/javascript/get-api-key 
 - have a look at Admin\NavigationController.php on how to use datatables and datatables with ajax if more than 150 entries
 
-## Admin LTE
-If you would like to change the default skin. 
-Please have a look in `webpack.mix.js` Line ~110 and uncomment the desired skin.
-Please also remember to update the skin's name in `'views\layouts\admin.blade.php'` - `<body class="skin-blue">`
-
 ## TODO
-[Upcoming Changes and Features](https://github.com/bpocallaghan/laravel-admin-starter/blob/master/TODO.md)
+- finish refactoring files to titan for easier use and more flexibility
+- [Upcoming Changes and Features](https://github.com/bpocallaghan/laravel-admin-starter/blob/master/TODO.md)
 
 ## Thank you
 - [ADMIN LTE](https://github.com/almasaeed2010/AdminLTE).
 - Thank you [Taylor Ottwell](https://github.com/taylorotwell) for [Laravel](http://laravel.com/).
 - Thank you [Jeffrey Way](https://github.com/JeffreyWay) for the awesome resources at [Laracasts](https://laracasts.com/).
-- Thank you [Spatie](https://github.com/spatie) for all your packages.
 
 ## Note
-Please keep in mind this is for my personal workflow and might not fit your need.
+- I am busy refactoring the project to titan (titan will get some version updates)
+- I am starting with a new website where I will put it in use and probably do lots of updates to [titan](https://github.com/bpocallaghan/titan).
+
 This is my starter project for most crud admin portals.
-I try to keep it clean, flexibly and friendly to use. This is not a complete project or best practises, just trying to help the community :).
+I try to keep it clean, flexibly and friendly to use and to help the community.
 Please let me know about any issues or if you have any suggestions.
 
 ## Change log
